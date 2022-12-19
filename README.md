@@ -1,6 +1,6 @@
 # VirgoFussWebsite (First website project)
 
-Made a website for my band as a school project for our web developement class.
+I Made a website for my band as a school project for our web developement class.
 I had no prior experience from HTML, CSS or JavaScript.
 
 Ultimately going to turn this project into our real band website for everyone to see, just needs more fine tuning and design changes.
