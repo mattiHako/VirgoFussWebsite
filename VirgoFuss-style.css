@@ -401,6 +401,56 @@ body {
     }
     }
 
+
+/*Mediascreen 1500px max*/
+
+
+@media (max-width: 1500px) and (min-width: 1000px) {
+
+   
+
+    /* BIO */
+
+    .bioMain {
+        display: flex;
+        height: 100%;
+        width: 92%;
+        justify-content: flex-start;
+        background-color: black;
+        border: double white;
+        border-radius: 80px 0 500px 0px;
+        box-shadow: 15px 7px 20px 2px black;
+        animation-name: links;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    #biokuva {
+        padding: 30px;
+        height: 60%;
+    }
+
+    #bioStory {
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        width: 65%;
+        padding: 30px;
+    }
+
+    .bioTxt {
+        letter-spacing: 2px;
+        font-family: 'Bebas Neue', 'cursive';
+        margin: 0;
+        padding-bottom: 30px;
+        color: white;
+
+    }
+}
+    /* Music */
+
+    
+
 /*MEDIASCREEN mobile */
 
 
