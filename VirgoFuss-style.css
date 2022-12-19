@@ -1,0 +1,714 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.mainFont {
+    color: white;
+}
+
+#preloader {
+    z-index: 100;
+    height: 100vh;
+    width: 100%;
+    background: #000000 url(Pictures/Virgo_logo.png) no-repeat center center;
+    background-size: 30vh;
+    position: fixed
+}   
+
+
+
+
+/* MEDIASCREEN pc selaimelle */
+
+@media screen and (min-width: 1000px){
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:wght@300&family=Teko:wght@300&display=swap');  
+
+    #spotifyMobile {
+        display: none;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #burgerOpen {
+        display: none;
+    }
+
+     
+
+    /*Page backround with animations*/
+
+    body {
+        background-color: #000000;
+        background-image: url("Pictures/VirgoFuss-23.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation-name: movingPicture;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+    }
+    
+
+    @keyframes movingPicture {
+        from {background-position-x: -120px;}
+        to {background-position-x: 0px;}
+    }
+
+
+
+    /* Center page */
+
+    #center {
+        display: flex;
+        height: 66vh;
+        justify-content: center;
+    }
+
+    /*Banner section */
+
+    #banner {
+        background: linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0));
+        display: flex;
+        justify-content: space-between;
+        height: 18vh;
+        width: 100%;
+    }
+
+    #virgoLogo {
+        height: 100%;
+    }
+
+    /* navigation */
+
+    #nav {
+        display: flex;
+        width: 35%;
+        height: 12%;
+        flex-direction: column;
+        justify-content: space-around;
+        top: 0;
+        left: 65%;
+        border-radius: 0px 0px 0px 80px;
+        transition-duration: 0.4s;
+        position: fixed;
+        right: 0;
+    }
+
+    #nav:hover {
+        border-radius: 0px 0px 0px 120px;
+        background-color: #000000a3;
+        box-shadow: inset 4px -5px 13px 6px #000000de;
+    }
+
+    /*Social media links*/
+
+    #some {
+        position: fixed;
+        right: 9%;
+        width: 18%;
+        top: 1%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .someBtn {
+        transition-duration: 0.2s;
+    }
+
+    .someIcon {
+        height: 3vh;
+    }
+  
+
+    .someBtn:hover {
+        background: rgb(83, 175, 255);
+        border-radius: 20%;
+        
+       
+        cursor: pointer;
+    }
+
+
+    /* Toolbar banner */
+
+
+    #toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 30%;
+        width: 100%;
+        top: 60%;
+        position: absolute;
+    }
+
+    /* Toolbar font */
+    .font {
+        font-family: monospace;
+        font-size: 1.5rem;
+        color: white;
+        transition-duration: 0.2s;
+    }
+
+    .font:hover {
+        cursor: pointer;
+        color: rgb(83, 175, 255);
+    }
+
+    /* Bio Music and Video pages */
+
+    .BioContainer {
+        display: none;
+    }
+
+    .BioContainer.active {
+        display: flex;
+        height: 100%;
+        width: 92%;
+        justify-content: center;
+    }
+
+    /* BIO */
+
+    .bioMain {
+        display: flex;
+        height: 100%;
+        width: 92%;
+        justify-content: center;
+        background-color: black;
+        border: double white;
+        border-radius: 80px 0 500px 0px;
+        box-shadow: 15px 7px 20px 2px black;
+        animation-name: links;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    #biokuva {
+        padding: 30px;
+    }
+
+    #bioStory {
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        width: 34%;
+        padding: 30px;
+    }
+
+    .bioTxt {
+        letter-spacing: 2px;
+        font-family: 'Bebas Neue', 'cursive';
+        margin: 0;
+        padding-bottom: 30px;
+        color: white;
+
+    }
+
+    /* Music */
+
+    .albumContainer {
+        display: none;
+    }
+
+    .albumContainer.active {
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        box-shadow: 15px 7px 20px 2px black;
+        animation-name: links;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        height: 105%;
+        margin-top: -25px;
+        margin: 0 40px;
+    }
+
+
+    .albumit {
+        background-color: rgb(0 15 80);
+        border: solid white;
+        border-radius: 50px 0;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 11px 9px 20px 2px black;
+        overflow-y: auto;
+    }
+
+    hr {
+        width: 80%;
+    }
+    
+
+    .albumCovers {
+        align-self: center;
+        width: 50%;
+        border-radius: 100% 0% 100% 0% / 21% 89% 11% 79%;
+        border: solid #86b0f1;
+        margin: 1vh;
+    }
+
+    .headline {
+        letter-spacing: 2px;
+        font-family: 'Bebas Neue', 'cursive';
+        color: white;
+        text-align: center;
+        margin-top: 1%;
+    }
+
+    .musicFont {
+        font-family: 'Epilogue', sans-serif;
+        color: white;
+        text-align: start;
+        margin: 0.5% 25%;
+    }
+
+    /* VideoPage */
+
+    .youtubeContainer {
+        display: none;
+    }
+
+    
+
+    .youtubeContainer.active {
+        border: double white;
+        background: linear-gradient(358deg, #700000, #000000);
+        border-top-left-radius: 190px;
+        border-bottom-right-radius: 190px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 11px 9px 20px 2px black;
+        animation-name: links;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        margin: 0 2%;
+    }
+
+    #youtube {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        height: 80%;
+        justify-content: center;
+    }
+
+    .video {
+        margin: 4vh;
+        height: 80%;
+    }
+
+    /* Bio, Music and Video Link animations */
+
+    @keyframes links {
+        from {width: 40%}
+        to {width: 100%;}
+        from {opacity: 0;}
+        to {opacity: 100%}
+    }
+
+
+   
+
+    #spotify {
+        opacity: 0;
+        background-color: rgb(59 112 163);
+        height: 15%;
+        width: 30%;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 9px auto;
+        border: double white;
+        border-radius: 25px;
+        position: relative;
+        top: 25px;
+        animation-name: ghostPictures;
+        animation-delay: 2s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+
+    }
+
+     /* Page footer */
+
+    #bottomSite {
+        width: 100%;
+        height: 50vh;
+    }
+
+
+    #slideShow {
+        flex-direction: row;
+        display: flex;
+        background: linear-gradient(rgb(0 0 0), rgb(51 59 90 / 63%));
+        width: 100%;
+        height: 50vh;
+        overflow-x: hidden;
+        overscroll-behavior-inline: contain;
+        border-top: solid white;
+    }
+
+    #grabAnimation {
+        opacity: 0;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        bottom: -20%;
+        border-radius: 25px;
+        background-color: #000000ba;
+        box-shadow: 0px 0px 10px 3px white, inset 0px 0px 8px 3px white;
+        animation-name: ghostPictures;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+    }
+
+    .fa-solid, .fa-forward {
+        font-size: xx-large;
+        }
+
+    /*footeri pics*/
+
+    
+
+    .virgokuvat {
+        height: 90%;
+        display: flex;
+        object-fit: cover;
+        max-width: 100%;
+        margin: 17px 10px;
+        border-radius: 15% 67% 8% 92% / 100% 0% 100% 0%;
+        border: solid white;
+        box-shadow: 7px 5px 10px 9px black;
+        align-self: center;
+    }
+    
+
+    @keyframes ghostPictures {
+        from {opacity: 0;}
+        to {opacity: 100%;}
+    }
+    }
+
+/*MEDIASCREEN mobile */
+
+
+@media screen and (max-width: 1000px) {
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Epilogue:wght@300&family=Teko:wght@300&display=swap');  
+
+    #toolbar {
+        display: none;
+    }
+
+    #spotify {
+        display: none;
+    }
+
+    body {
+        background-color: #000000;
+        margin: 0;
+    }
+
+    /*Font for links*/
+    
+    .font {
+        opacity: 0;
+        font-family: monospace;
+        font-size: larger;
+        color: white;
+        margin: 3% 15%;
+        animation-name: fontAnimate;
+        animation-delay: 0.5s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        padding: 10%;
+    }
+
+    .font:hover {
+        color: #4ff7ff;
+    }
+
+    .fa-solid {
+        color: white;
+        font-size: xx-large;
+    }
+
+
+    #draggin {
+        display: none;
+    }
+
+    /* burger tab and font.*/
+
+    #burger {
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        margin: 8px;
+    }
+
+    #burgerOpen {
+        display: none;
+    }
+
+    #burgerOpen.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        height: 20vh;
+        width: 15vh;
+        background-color: #000000;
+        border-radius: 4px;
+        box-shadow: 0px 4px 11px 0px #fefbcb;
+        animation-name: burgerAnimate;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        margin: 2%;
+        right: 0;
+        top: 8%;
+    }
+
+    @keyframes burgerAnimate {
+        from {height: 0vh}
+        to {height: 20vh;}
+    }
+
+    @keyframes fontAnimate {
+        from {opacity: 0;}
+        to {opacity: 100%;}
+    }
+
+
+    /*Center page with background image/animation*/
+
+    #center {
+        background-image: url(Pictures/contoursTausta.jpg);
+        background-size: 65vh;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        min-height: 65vh;
+        height: auto;
+    }
+
+    #center.active {
+        animation-name: movingPicture-y;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: space-between;
+        min-height: 65vh;
+        height: auto;
+    }
+
+    @keyframes movingPicture-y {
+        from {background-position-y: 0px;}
+        to {background-position-y: -100px;}
+    }
+
+    /* Bio Music and Video link containers */
+
+    .BioContainer {
+        display: none;
+    }
+    
+
+    .BioContainer.active {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12vh;
+        height: 100vh;
+    }
+    /* BIO page */
+
+    .bioMain {
+        background-color: #000000a1;
+        border-radius: 3%;
+        padding: 10px;
+        border: solid white;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+
+    #biokuva {
+        width: 40%;
+        float: left;
+        padding: 8px;
+    }
+    
+    .bioStory {
+        height: 100%;
+    }
+
+    .bioTxt {
+        font-family: 'Bebas Neue', cursive;
+        color: white;
+    }
+
+    /* Music page*/
+
+    .albumContainer {
+        display: none;
+    }
+
+    .albumContainer.active {
+        display: flex;
+        flex-direction: column;
+        overflow-x: auto;
+        align-items: stretch;
+        border: double white;
+        margin: 3vh;
+        margin-top: 12vh;
+        background-color: #e48509;
+        height: 100%;
+    }
+
+    .albumit {
+        background-color: rgb(228, 133, 9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        margin: 4vw;
+    }
+
+    .albumCovers {
+        width: 80vw;
+    }
+
+    .headline {
+        margin: 0;
+        letter-spacing: 2px;
+        font-family: 'Bebas Neue', 'cursive';
+        color: white;
+        text-align: center;
+    }
+    
+    .musicFont {
+        font-family: 'Epilogue', sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+     /* VideoPage */
+
+     .youtubeContainer {
+        display: none;
+     }
+
+     .youtubeContainer.active {
+        border: double white;
+        border-radius: 50px;
+        background: linear-gradient(darkred, #000000c9);
+        width: 90%;
+        height: 70vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 11vh;
+    }
+
+    #youtube {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video {
+        width: 60vw;
+        height: 32vh;
+        margin: 10px;
+    }
+
+  
+    
+    /* Navigation section*/
+
+    #some {
+        position: fixed;
+        top: 1%;
+    }
+
+    .someIcon {
+        height: 5vh;
+    }
+
+    #nav {
+        width: 58%;
+        position: fixed;
+        right: 0px;
+        margin: 12px;
+    }
+
+    #virgoLogo {
+        position: fixed;
+        left: 0;
+        height: 11vh;
+        border-radius: 10px;
+    }
+
+      /* spotify banner */
+
+    #spotifyMobile {
+        background-color: rgb(59 112 163);
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 9px auto;
+        border: double white;
+        border-radius: 25px;
+        position: relative;
+        width: 100%;
+    }
+    
+
+    /* Footer section */
+
+    #bottomSite {
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    }
+
+    #slideShow {
+        flex-direction: row;
+        display: flex;
+        background: linear-gradient(rgb(0 0 0), rgb(51 59 90 / 63%));
+        width: 100%;
+        height: 50vh;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+    }
+
+    .virgokuvat {
+        height: 95%;
+        object-fit: cover;
+        max-width: 100%;
+        margin: 0 10px;
+        border-radius: 15% 67% 8% 92% / 100% 0% 100% 0%;
+        border: solid white;
+        box-shadow: 7px 5px 10px 9px black;
+    }
+    }
+
+
