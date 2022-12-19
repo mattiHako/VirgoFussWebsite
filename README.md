@@ -17,4 +17,4 @@ Minulta ei löytynyt aiempaa kokemusta HTML, CSS tai JavaScriptin käytöstä.
 Ennen pitkää muovaan tämän projektin vielä bändimme virallisiksi sivuiksi ihmisille nähtäväksi.
 Vaatii vaan vielä hieman hiomista ja ulkoasumuutoksia.
 
-Projektin arvosanaksi sain täydet 5/5, joten siitä voi olla ylpeä. :D
+Projektin arvosanaksi sain täydet 5/5, joten siitä voin olla ylpeä. :D
